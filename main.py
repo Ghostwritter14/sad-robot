@@ -42,7 +42,7 @@ class SadRobot:
         return response
 
     def check_game_status(self):
-        if self.happiness <= -20:
+        if self.happiness <= -30:
             return "lost"
         elif self.happiness >= 100:
             return "won"
