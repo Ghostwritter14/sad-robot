@@ -142,7 +142,7 @@ class SadRobotGUI(QWidget):
         layout.addWidget(self.output)
         self.input_line = QLineEdit()
         self.input_line.setPlaceholderText("Type your text here...")
-        self.input_line.returnPressed.connect(self.handle_send)  # Connecting the returnPressed signal
+        self.input_line.returnPressed.connect(self.handle_send)  # Connecting to returnPressed (ENTER button)
         layout.addWidget(self.input_line)
         send_button = QPushButton("Send")
         send_button.clicked.connect(self.handle_send)
