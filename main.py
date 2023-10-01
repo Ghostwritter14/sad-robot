@@ -43,9 +43,9 @@ class SadRobot:
 
     def check_game_status(self):
         if self.happiness <= -30:
-            return "lost"
+            return "You Lost"
         elif self.happiness >= 100:
-            return "won"
+            return "You Won!"
         return "continue"
 
     def generate_response(self, sentiment):
@@ -158,9 +158,9 @@ class SadRobotGUI(QWidget):
             self.score_label.setText(f"Happiness Level: {self.sad_robot.happiness}")
 
             game_status = self.sad_robot.check_game_status()
-            if game_status == "lost":
+            if game_status == "You Lost":
                 self.lost_game()
-            elif game_status == "won":
+            elif game_status == "You Won":
                 self.won_game()
             self.sad_robot.speak(response)
             self.input_line.clear()
